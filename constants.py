@@ -6,7 +6,7 @@ BANK_NAME = "NekoBank"
 BANK_BRANCH = "Malolos City Branch"
 MAIN_FILL = "="
 SUB_FILL = "-"
-WIDTH = 100
+WIDTH = 110
 
 ACCOUNT_LENGTH = 12
 PIN_LENGTH = 6
@@ -25,7 +25,7 @@ SUCCESS_COLOR = "orange"
 RECEIPT_WIDTH = 40
 RECEIPT_DELAY = 0.04
 
-CAT_PAD = 24
+CAT_PAD = 30
 CAT_DELAY = 0.001
 
 END_MESSAGE = "Thanks for using NekoBank, see you next time."

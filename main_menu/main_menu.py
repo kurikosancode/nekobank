@@ -20,7 +20,7 @@ def print_options() -> None:
     print("1. Deposit")
     print("2. Withdraw")
     print("3. Transfer")
-    print("4 Transaction History")
+    print("4. Transaction History")
     print("5. Check Account")
     print("6. Change Pin")
     print("7. Log Out")

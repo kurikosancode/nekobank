@@ -3,7 +3,7 @@ from utils.print import print_error, text_with_color, print_break, get_heading
 from utils.receipt import check_if_print_receipt
 from account_manager import BALANCE, ACCOUNT_NUMBER, add_to_history, account_exists, accounts, ACCOUNT_INFO
 from constants import SUCCESS_COLOR, WIDTH, SUB_FILL, FILL_COLOR, HEADING_COLOR, ACCOUNT_LENGTH, RECEIPT_DELAY, RECEIPT_WIDTH
-from errors import ACCOUNT_NOT_EXIST_ERROR
+from errors import ACCOUNT_NOT_EXIST_ERROR, SAME_ACCOUNT_ERROR
 
 
 def transfer(account_info: list) -> None:
@@ -15,6 +15,10 @@ def transfer(account_info: list) -> None:
         account_index = account_exists(to_account)
         if account_exists(to_account) == -1:
             print_error(ACCOUNT_NOT_EXIST_ERROR)
+            continue
+            
+        if account_info[ACCOUNT_NUMBER] == to_account:
+            print_error(SAME_ACCOUNT_ERROR)
             continue
 
         money = input_int("Money Transfer: ")
